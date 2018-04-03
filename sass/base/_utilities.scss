@@ -1,0 +1,29 @@
+%heading { //extendor
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.u-big-title {
+  @extend %heading; //include @extend  heading;
+  font-size: 4.5rem;
+  line-height: 1;
+
+  &--light { color: $color-light;}
+  &--dark { color: $color-dark;}
+}
+
+.u-sub-title {
+  @extend %heading; //include @extend  heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light { color: $color-light;}
+  &--dark { color: $color-dark;}
+}
+
+//Maring Buttom.
+.mb-sm {  margin-bottom: 2rem; }
+.mb-md {  margin-bottom: 3rem; }
+.mb-lg {  margin-bottom: 4rem; }
+.mb-hg {  margin-bottom: 8rem; }

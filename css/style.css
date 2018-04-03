@@ -1,0 +1,175 @@
+/* -------------------- Abstracts Files -------------------- */
+/* -------------------- Components Files -------------------- */
+/* -------------------- Base Files -------------------- */
+/* RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px; */
+* {
+  outline: none; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*@media only screen and (max-width: $bp-largest) {
+      font-size: 50%;
+  } */ }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #f9f7f6;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: minmax(5rem, 8vh) min-content 40vw repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+/**
+          -MinMax function allows to define a min an max size content.
+          -[] define de name of the columns. */
+/*
+    @media only screen and (max-width: $bp-large) {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-rows: 6rem calc(100vh - 6rem);
+    } */
+.u-big-title, .u-sub-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.u-big-title {
+  font-size: 4.5rem;
+  line-height: 1; }
+  .u-big-title--light {
+    color: #fff; }
+  .u-big-title--dark {
+    color: #000; }
+
+.u-sub-title {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .u-sub-title--light {
+    color: #fff; }
+  .u-sub-title--dark {
+    color: #000; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
+
+/* -------------------- Layout Files -------------------- */
+.header {
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(239, 63, 53, 0.3), rgba(241, 228, 48, 0.3)), url(../../img/bg-header.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(20rem, 50vh) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center; }
+
+.headbar {
+  background-color: #000;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .headbar__title {
+    display: grid;
+    align-self: center;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 2rem; }
+  .headbar__phone {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    padding-right: 2rem; }
+    .headbar__phone .fa-mobile-alt {
+      color: #f1e430;
+      font-size: 2.5rem;
+      margin-right: 1rem; }
+    .headbar__phone a, .headbar__phone span {
+      font-size: 1.5rem;
+      transform: translateY(5px); }
+    .headbar__phone span {
+      margin-left: .5rem;
+      margin-right: .5rem; }
+    .headbar__phone a {
+      text-decoration: none;
+      color: #fff;
+      transition: all .2s; }
+      .headbar__phone a:hover, .headbar__phone a:active {
+        color: gray; }
+
+.footer {
+  background-color: #000;
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+
+/* -------------------- Section Files -------------------- */
+.events-form {
+  background-color: #000;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-row-gap: 2rem; }
+
+.about__media {
+  background-color: #ef3f35;
+  grid-column: full-start / col-end 4;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center; }
+
+.about__story {
+  background-color: royalblue;
+  grid-column: col-start 5 / full-end;
+  padding: 6rem 8vw;
+  display: grid;
+  align-content: center;
+  justify-items: start; }
+
+.dishes {
+  background-color: orangered;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.testimonials {
+  background-color: green;
+  grid-column: full-start / full-end; }
+
+.contact {
+  background-color: #f1e430; }

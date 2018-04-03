@@ -1,0 +1,11 @@
+.events-form {
+  background-color: $color-dark;
+  grid-column: col-start 7 / full-end; //define grid columns position.
+  padding: 3rem;
+
+  display: grid;
+  align-content: center; // center elements.
+  justify-content: center; // center elements.
+  justify-items: center; // center elements.
+  grid-row-gap: 2rem; // add a litle margin between the title and the realtors
+}

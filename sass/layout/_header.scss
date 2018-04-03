@@ -1,0 +1,14 @@
+.header {
+  grid-column: full-start / col-end 6; //define grid columns position.
+  background-image: linear-gradient(rgba($color-primary, .3), rgba($color-secondary, .3)), url(../../img/bg-header.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(20rem, 50vh) 1fr; //Defining min-height.
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+}
