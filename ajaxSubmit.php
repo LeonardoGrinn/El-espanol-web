@@ -7,14 +7,14 @@ if (isset($_POST['submit'])) {
   $message = $_POST['mensaje'];
 
 
-  $mailTo = "contacto@español.restaurant"; //Corregir.
+  $mailTo = "contacto@xn--espaol-zwa.restaurant"; //* contacto@español.restaurant */
   $headers = "From: ".$mailFrom;
-  $txt = "Has recibido un nuevo correo de: ".$name.".\n\n"."Número celular: ".$phone.".\n\n".$message;
+  $txt = "Has recibido un nuevo correo de: ".$name.".\n\n"."Numero celular: ".$phone.".\n\n".$message;
 
-  mail($mailTo, "Información Banquetes", $txt, $headers);
+  mail($mailTo, "Informacion Banquetes", $txt, $headers);
 
-  header("Location: contacto.php?mailsend");
+  header("Location: index.php?mailsend");
 
 }
 
-//* contacto@kreisindustries.com */
+//* contacto@español.restaurant */
