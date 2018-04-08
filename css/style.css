@@ -320,7 +320,8 @@ a {
 /* -------------------- Layout Files -------------------- */
 .header {
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(239, 63, 53, 0.3), rgba(255, 206, 34, 0.3)), url(../../img/bg-header.jpg);
+  -webkit-background-image: linear-gradient(rgba(239, 63, 53, 0.3), rgba(255, 206, 34, 0.3)), url(../img/bg-header.jpg);
+  background-image: linear-gradient(rgba(239, 63, 53, 0.3), rgba(255, 206, 34, 0.3)), url(../img/bg-header.jpg);
   background-size: cover;
   background-position: center;
   padding: 8rem;
