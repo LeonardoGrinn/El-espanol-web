@@ -1,9 +1,23 @@
 %heading { //extendor
   font-family: $font-display;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .u-big-title {
+  @extend %heading; //include @extend  heading;
+  font-size: 4.5vw;
+  line-height: 1;
+
+  &--light { color: $color-light;}
+  &--dark { color: $color-dark;}
+
+  @include respond(iphone-plus) {
+    font-size: 6vw;
+  }
+}
+
+.u-md-title {
   @extend %heading; //include @extend  heading;
   font-size: 4.5rem;
   line-height: 1;
@@ -14,12 +28,23 @@
 
 .u-sub-title {
   @extend %heading; //include @extend  heading;
-  font-size: 4rem;
-  font-style: italic;
+  font-size: 1.4vw;
   line-height: 1;
 
   &--light { color: $color-light;}
   &--dark { color: $color-dark;}
+
+  @include respond(full-desktop) {
+    font-size: 1.4vw;
+  }
+
+  @include respond(ipad) {
+    font-size: 2.5vw;
+  }
+
+  @include respond(iphone-plus) {
+    font-size: 4.5vw;
+  }
 }
 
 //Maring Buttom.

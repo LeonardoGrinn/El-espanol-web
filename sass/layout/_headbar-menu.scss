@@ -1,4 +1,4 @@
-.headbar {
+.headbar-menu {
   background-color: $color-dark;
   grid-column: full-start / full-end; //define grid columns position.; //Defining position.
   display: grid;
@@ -47,6 +47,16 @@
       align-self: center; //vertical align.
     }
 
+    .fa-arrow-left {
+      display: none;
+      @include respond(iphone-plus) {
+        display: flex;
+        color: $color-secondary;
+        font-size: 6vw;
+        margin-right: 1rem;
+      }
+    }
+
     .fa-mobile-alt {
       color: $color-secondary;
       font-size: 2vw;
@@ -57,7 +67,7 @@
       }
 
       @include respond(iphone-plus) {
-        font-size: 7vw;
+        display: none;
       }
     }
     a, span {

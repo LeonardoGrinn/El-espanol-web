@@ -1,4 +1,69 @@
 .testimonials {
-  background-color: green;
+  background-color: $color-primary;
   grid-column: full-start / full-end; //define grid columns position.
+  overflow: hidden;
+
+  @include respond(ipad) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(iphone-plus) {
+    margin: 0;
+  }
+
+  /*.fa-quote-right  {
+    color: rgba($color-secondary, 1);
+    font-size: 4rem;
+    margin-left: 1rem;
+    transform: translateY(-1.5rem);
+  } */
+
+  .item-1,
+  .item-2,
+  .item-3 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+
+    font-size: 1.5vw;
+
+  	animation-duration: 20s;
+  	animation-timing-function: ease-in-out;
+  	animation-iteration-count: infinite;
+
+    @include respond(ipad) {
+      font-size: 2.3vw;
+    }
+
+    @include respond(iphone-plus) {
+      font-size: 4.2vw;
+      text-align: center;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    @include respond(iphone-plus) {
+      font-size: 4vw;
+    }
+
+    @include respond(iphone-se) {
+      font-size: 3.5vw;
+    }
+  }
+
+  .item-1{
+	  animation-name: anim-1;
+    transform: translateY(100%);
+  }
+
+  .item-2{
+  	animation-name: anim-2;
+  }
+
+  .item-3{
+  	animation-name: anim-3;
+    transform: translateY(-100%);
+  }
 }

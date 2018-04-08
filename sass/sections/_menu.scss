@@ -1,0 +1,17 @@
+.menu {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+
+  @include respond(iphone-plus) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+
+  .box-container {
+    border-top: solid $color-primary;
+    img {
+      width: 100%;
+    }
+  }
+}

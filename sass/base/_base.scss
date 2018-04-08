@@ -1,6 +1,13 @@
+:root { //Higher lever than html for declare custom properties.
+  --color-primary: #ef3f35;// -- define a custom properties the replacement for SASS var.
+  --color-secondary: #ffce22;
+}
+
 // COLOR VARIABLES
 $color-primary: #ef3f35;
-$color-secondary: #f1e430;
+$color-primary--dark: #ec1b0f;
+$color-secondary: #ffce22;
+$color-terciary: #888888;
 
 $color-dark: #000;
 $color-light: #fff;
@@ -10,6 +17,7 @@ $color-grey-light-1: #f9f7f6;
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+$font-auxiliar:'Abril Fatface', sans-serif;
 
 /* RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px
@@ -29,6 +37,10 @@ $bp-small: 37.5em;    // 600px; */
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar { //Hide the horrible scroll bar ;).
+    display: none;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; //10px/16px -> 1rem = 10px.
@@ -43,22 +55,21 @@ body {
   color: $color-grey-light-1;
   font-weight: 300;
   line-height: 1.6;
+  background-color: $color-primary;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
   display: grid;
-  grid-template-rows: minmax(5rem, 8vh) min-content 40vw repeat(4, min-content);
+  grid-template-rows: minmax(5rem, 8vh) min-content 1fr repeat(4, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start]
   minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-} /**
-          -MinMax function allows to define a min an max size content.
-          -[] define de name of the columns. */
-    /*
-    @media only screen and (max-width: $bp-large) {
-      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-    }
+}
 
-    @media only screen and (max-width: $bp-medium) {
-      grid-template-rows: 6rem calc(100vh - 6rem);
-    } */
+/**
+          -MinMax function allows to define a min an max size content.
+          -[] define de name of the columns.
+*/

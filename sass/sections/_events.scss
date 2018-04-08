@@ -1,0 +1,160 @@
+.events {
+  background-color: $color-dark;
+  grid-column: col-start 7 / full-end; //define grid columns position.
+  padding: 3rem;
+  display: grid;
+  grid-template-rows: .8fr .2fr;
+  //border-top: 2px solid $color-secondary;
+  //border-bottom: 2px solid $color-secondary;
+
+  @include respond(ipad) {
+    grid-column: full-start / full-end; //define grid columns position.
+    grid-template-rows: 1fr;
+  }
+
+  @include respond(iphone-se) {
+    grid-template-rows: 1fr;
+  }
+
+
+  &__logo {
+    display: grid;
+    justify-items: center; // center elements.
+    margin-top: 3rem;
+
+    @include respond(full-desktop) {
+      margin-top: 5rem;
+    }
+
+    @include respond(ipad) {
+      display: none;
+    }
+
+    img {
+      width: 60%;
+
+      @include respond(desktop) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    @include respond(ipad) {
+      margin-bottom: 2.5rem;
+    }
+
+
+    h2 {
+      margin-left: 10%;
+      font-family: $font-display;
+      line-height: 1.5;
+      font-size: 1.62vw;
+      text-transform: uppercase;
+
+      @include respond(full-desktop) {
+        font-size: 2vw;
+      }
+
+      @include respond(large-desktop) {
+        font-size: 1.54vw;
+      }
+
+      @include respond(medium-desktop) {
+        font-size: 1.45vw;
+      }
+
+      @include respond(desktop) {
+        margin-left: 5%;
+        font-size: 1.52vw;
+      }
+
+      @include respond(ipad) {
+        font-size: 4.5vw;
+      }
+
+      @include respond(iphone-plus) {
+        font-size: 5.5vw;
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    form {
+      margin-top: 2rem;
+    }
+
+    input,textarea {
+      width: 80%;
+      margin-left: 10%;
+      background-color: $color-grey-light-1;
+      color: $color-terciary;
+      font-size: 1.5rem;
+
+      border: none;
+      margin-bottom: 1rem;
+
+      &::placeholder {
+        color: $color-terciary;
+        font-size: 1.5rem;
+
+        @include respond(full-desktop) {
+          font-size: 2.2rem;
+        }
+
+        @include respond(ipad) {
+          font-size: 1.7rem;
+        }
+
+        @include respond(iphone-plus) {
+          font-size: 2.5vw;
+        }
+      }
+
+      @include respond(full-desktop) {
+        font-size: 2.2rem;
+      }
+
+      @include respond(desktop) {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 1.5rem;
+      }
+
+      @include respond(ipad) {
+        font-size: 1.7rem;
+      }
+
+      @include respond(iphone-plus) {
+        font-size: 2.5vw;
+      }
+    }
+
+    input {
+      height: 3rem;
+
+      @include respond(full-desktop) {
+        height: 4rem;
+      }
+
+      @include respond(ipad) {
+        height: 4.5rem;
+      }
+
+      @include respond(iphone-plus) {
+        height: 3rem;
+      }
+    }
+
+    button {
+      margin-left: 10%;
+      width: 80%;
+
+      @include respond(desktop) {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+}

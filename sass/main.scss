@@ -2,20 +2,24 @@
 @import "abstracts/mixins"; //Import a _mixins.scss file.
 @import "abstracts/variables"; //Import a _variables.scss file.
 /* -------------------- Components Files -------------------- */
+@import "components/button"; //Import a _button.scss file.
 
 /* -------------------- Base Files -------------------- */
 @import "base/base"; //Import a _base.scss file.
 @import "base/typography"; //Import a _typography.scss file.
 @import "base/utilities"; //Import a _utilities.scss file.
+@import "base/animations"; //Import a _base.scss file.
 
 /* -------------------- Layout Files -------------------- */
 @import "layout/header"; //Import a _header.scss file.
 @import "layout/headbar"; //Import a _navigation.scss file.
+@import "layout/headbar-menu"; //Import a _navigation.scss file.
 @import "layout/footer"; //Import a _footer.scss file.
 
 /* -------------------- Section Files -------------------- */
-@import "sections/events-form"; //Import a _events-form.scss file.
+@import "sections/events"; //Import a _events.scss file.
 @import "sections/about"; //Import a _about.scss file.
 @import "sections/dishes"; //Import a _dishes.scss file.
 @import "sections/testimonials"; //Import a _testimonials.scss file.
 @import "sections/contact"; //Import a _contact.scss file.
+@import "sections/menu"; //Import a _menu.scss file.
