@@ -40,42 +40,45 @@
       <div class="events"> <!-- events -->
         <div class="events__form"> <!-- events form -->
           <h2>Servicio de banquetes</h2>
-          <form id="formContact" class="form-horizontal" method="post" class="form-horizontal" action="ajaxSubmit.php">
+          <div class="form">
+            <form id="formContact" class="form-horizontal" method="post" class="form-horizontal" action="ajaxSubmit.php">
 
               <div class="form-group">
 
-                  <input type="text" class="form-control"  placeholder=" NOMBRE" name="nombre" required>
+                <input type="text" class="form-control"  placeholder=" NAME" name="nombre" required>
 
               </div>
 
               <div class="form-group">
 
-                  <input type="text" class="form-control" placeholder=" TELÉFONO" name="telefono" required>
+                <input type="text" class="form-control" placeholder=" PHONE NUMBER" name="telefono" required>
 
               </div>
 
-              <div class="form-group">
+            <div class="form-group">
 
-                  <input type="email" class="form-control" placeholder=" E-MAIL" name="email" required>
+              <input type="email" class="form-control" placeholder=" E-MAIL" name="email" required>
+
+            </div>
+
+            <div class="form-group">
+
+              <textarea class="form-control" rows="6" placeholder=" WRITE YOUR MESSAGE HERE" name="mensaje"  width="98%" required></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <button class="btn" type="submit" name="submit">
+                  <span class="btn__visible">Contáctanos</span>
+                  <span class="btn__invisible">¡Date el gusto!</span>
+                </button>
 
               </div>
 
-              <div class="form-group">
+            </form>
 
-                  <textarea class="form-control" rows="6" placeholder=" ESCRIBE AQUÍ TU MENSAJE" name="mensaje"  width="98%" required></textarea>
-
-              </div>
-
-              <div class="form-group">
-
-              <button class="btn" type="submit" name="submit">
-                <span class="btn__visible">Contáctanos</span>
-                <span class="btn__invisible">¡Date el gusto!</span>
-              </button>
-
-              </div>
-
-          </form><!-- ./form -->
+          </div><!-- ./form -->
         </div> <!-- ./events form -->
 
       <div class="events__logo"><!-- Company logo -->

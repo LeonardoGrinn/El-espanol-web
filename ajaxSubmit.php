@@ -7,11 +7,11 @@ if (isset($_POST['submit'])) {
   $message = $_POST['mensaje'];
 
 
-  $mailTo = "contacto@xn--espaol-zwa.restaurant"; //* contacto@español.restaurant */
+  $mailTo = "manager.espanol@gmail.com"; //* contacto@español.restaurant */
   $headers = "From: ".$mailFrom;
   $txt = "Has recibido un nuevo correo de: ".$name.".\n\n"."Numero celular: ".$phone.".\n\n".$message;
 
-  mail($mailTo, "Informacion Banquetes", $txt, $headers);
+  mail($mailTo, "Banquetes", $txt, $headers);
 
   header("Location: index.php?mailsend");
 
